@@ -1,0 +1,57 @@
+¬<!doctype html>
+    <html lang="en">
+       <head>
+           
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+            <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+            <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"> </script>
+            <script type="text/javascript" src="http://jquery-ui-map.googlecode.com/svn/trunk/ui/min/jquery.ui.map.min.js"></script>
+            <script type="text/javascript">
+
+                var restaurantPosition = new google.maps.LatLng(-37.847844,145.114873),
+                mobileDemo = { 'center': '-37.847844,145.114873', 'zoom': 12 };
+
+                function initialize() {
+                    $('#map_canvas').gmap({ 'center': mobileDemo.center, 'zoom': mobileDemo.zoom, 'disableDefaultUI':false });
+                }
+
+                $(document).on("pageinit", "#basic-map", function() {
+                    initialize();
+                });
+
+                $(document).on('click', '.add-markers', function(e) {
+                        e.preventDefault();
+                        $('#map_canvas').gmap('addMarker', { 'position': restaurantPosition } );
+                });
+                google.maps.event.addDomListener(window, 'page:load', initialize);
+                $('#canvas-map').on('pageshow', function(){
+    google.maps.event.trigger(canvas-map, "resize");
+});
+            </script>
+            <script> function Refresh(){
+            	location.reload();
+            }</script>
+          
+        </head>
+        <body>
+            <div id="basic-map" data-role="page">
+                <div data-role="header">
+                    <h1>Position</h1>
+                    <a data-rel="back">Back</a>
+                </div>
+                
+                <div data-role="content">   
+                	<h4>Please refresh your browser if the map is not displayed and please refresh home when navigate back</h4>
+                    <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+                        <div id="map_canvas" style="height:350px;"></div>
+                    </div>
+                    <a href="#" class="add-markers" data-role="button" data-theme="b">Add Position Marker </a>
+                    
+                </div>
+                 <div data-role="footer" data-position="fixed">
+      <h3>&copy;Ryden Sun</h3>
+    </div>
+            </div>      
+        </body>
+    </html>

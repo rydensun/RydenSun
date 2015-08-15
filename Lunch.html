@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+   <link rel="stylesheet" href="css/themes/testtheme.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" /></head>
+
+</head>
+
+<body >
+  <!-- Page: home  -->
+  <div id="home" data-role="page" data-theme="d">
+    <div data-role="header" data-position="fixed">
+      <h3>Menu</h3>
+      <a class="ui-btn ui-btn-left ui-icon-back ui-corner-all" href="index.html">Back</a>
+      <a class="ui-btn ui-btn-right ui-corner-all" href="#cartpanel">Cart</a>
+    </div>
+    <div data-role="panel" id="cartpanel" data-display="reveal">
+      <p>You have ordered:</p>
+    </div>
+     <div data-role="popup" id="addPopup" class="ui-content">
+      <p>Add successfully!!</p>
+    </div>
+    <div data-role="panel" id="dumplingsdescri" data-display="reveal" data-position="right">
+    	<h2>Dumplings</h2><br />
+    	 	<h3>Price:$5</h3><br />
+    	<h3>Recipe</h3>
+    	<p>The dumplings is made by beef and flavour</p>
+    	      <input type="number"  placeholder="number to order.." />
+    	      <a class="ui-btn" id="addcart" href="#addPopup" data-rel="popup">Add to Cart</a>
+    </div>
+    <div role="main" class="ui-content">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a href="Menu.html" data-transition="fade" >Break</a>
+          </li>
+          <li>
+            <a href="Lunch.html" data-transition="fade" class="ui-btn-active">Lunch</a>
+          </li>
+          <li>
+            <a href="Dinner.html" data-transition="fade">Dinner</a>
+          </li>
+          <li>
+            <a href="Drinks.html"data-transition="fade">Drinks</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-grid-a">
+      	<div class="ui-block-a"> <img id="baoziimg"style="width:94%;" src="img/dumplings.jpg" is="image" >
+         </div>
+     <div class="ui-block-b"> <img id="baoziimg"style=" width: 94%;" src="img/dumplings.jpg" is="image" >
+        </div>
+     </div>
+         <div class="ui-grid-a">
+         	<div class="ui-block-a">
+      	<a id="baozibtn" class="ui-btn ui-corner-all ui-inline "  href="#dumplingsdescri" >Description</a>
+     </div>
+     <div class="ui-block-b"><a id="baozibtn" class="ui-btn ui-corner-all ui-inline " href="#dumplingsdescri" >Description</a>
+  </div>
+     </div></div>
+    <div data-role="footer" data-position="fixed">
+      <h3>© Ryden Sun</h3>
+    </div>
+  </div>
+</body>
+
+</html>

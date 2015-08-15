@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		function submit(){
+			alert("Your feecback has been succesfully submited!!");
+		}
+	</script>
+	</head>
+
+	<body>
+		<div id="feedback" data-role="page">
+			<div data-role="header" data-position="fixed">
+				<h3>FeedBack</h3>
+				<a class="ui-btn ui-btn-left ui-icon-back ui-corner-all" href="index.html">Back</a>
+				<a class="ui-btn ui-btn-right ui-corner-all" href="#cartpanel">Cart</a>
+			</div>
+			<div data-role="panel" id="cartpanel" data-display="reveal">
+				<p>You have ordered:</p>
+			</div>
+			<div data-role="main">
+				<div data-role="popup" id="submtpopup" class="ui-content" data-position-to="window" data-transition="slidedown">
+      <p>Your feedback has been submitted succesfully!!</p>
+    </div>
+				<label for="textinput-2">Please input your name:</label>
+				<input type="text" name="textinput-2" id="textinput-2" placeholder="Your name.." value="">
+				<label for="textinput-2">Please input your email:</label>
+				<input type="email" name="textinput-2" id="textinput-2" placeholder="Your email.." value="">
+				<label for="textarea-2">Please input your feedback:</label>
+				<textarea cols="40" rows="15" name="textarea-2" id="textarea-2">What do you think of our restaurant..</textarea>
+				<label for="select-multiple-2">Please rate us!:</label>
+				<select multiple="multiple" data-native-menu="false" name="select-multiple-2" id="select-multiple-2">
+					<option value="">Your Rate:</option>
+					<option value="small">You will 100% come back</option>
+					<option value="medium">You may come back</option>
+					<option value="large">You may not come back</option>
+					<option value="large">You will 100% not come back</option>
+				</select>
+				<a class="ui-btn" id="submit" href="#submtpopup" data-rel="popup">Submit</a>
+   
+				
+			</div>
+			 <div data-role="footer" data-position="fixed">
+      <h3>© Ryden Sun</h3>
+    </div>
+		</div>
+		
+	</body>
+
+</html>
